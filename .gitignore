@@ -1,0 +1,15 @@
+# Specific files
+project-notes
+project-notes.md
+
+# Specific folders
+.vscode
+.idea
+.env
+__pycache__
+node_modules
+dist
+coverage
+venv
+
+# OS generated files
