@@ -11,19 +11,29 @@
     <script src="static/scripts.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>List of notes</h1>
-    </header>
     <main>
-        <section id="content">
-            <ul>
-                {% for note in notes %}
-                    <li>{{ note.title }} - {{ note.content }}</li>
-                {% else %}
-                    <li>No notes available</li>
-                {% endfor %}
-            </ul>
-        </section>
+        <div class="main-layout">
+            <!-- Sidebar for notes list -->
+            <aside class="sidebar">
+                <h2>Your Notes</h2>
+                <ul class="note-list">
+                    {% for note in notes %}
+                        <li class="note-item">{{ note.title }}</li>
+                    {% else %}
+                        <li>No notes available</li>
+                    {% endfor %}
+                </ul>
+            </aside>
+            <div class="note-container">
+                <div class="editor-box">
+                    <textarea id="note-editor" placeholder="Edit your note here...">
+                    </textarea>
+                    <div class="button-bar">
+                        <button id="save-button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Michael Stacy</p>

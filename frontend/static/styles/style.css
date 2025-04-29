@@ -1,0 +1,144 @@
+/* static/styles/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #2e2e2e;  /* dark gray background */
+    color: #ffffff;            /* white text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+a {
+    color: #87cefa; /* light blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main layout wrapper */
+.main-layout {
+    display: flex;
+    height: 100vh;
+    gap: 20px; /* Adds space between sidebar and editor */
+    padding: 20px; /* Optional, gives breathing room around entire layout */
+    box-sizing: border-box;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #444;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.note-list {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.note-item:hover {
+    background-color: #444;
+}
+
+/* Container for centering the editor */
+.note-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Editor box styling */
+.editor-box {
+    width: 80%;
+    max-width: 1000px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Styling for the note editor */
+#note-editor {
+    width: 80%;
+    height: 70%;
+    padding: 10px;
+    font-size: 1.2rem;
+    resize: both;
+    overflow: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #333;  /* Dark gray background for editor */
+    color: white;  /* White text for readability */
+    outline: none;
+}
+
+/* When focused, the border color changes for better user interaction */
+#note-editor:focus {
+    border-color: #007bff;  /* Blue border when focused */
+}
+
+/* Adding smooth transition for the border color when focusing */
+#note-editor {
+    transition: border-color 0.3s ease;
+}
+
+/* Optional: Style for placeholder text */
+#note-editor::placeholder {
+    color: #bbb; /* Lighter gray for placeholder */
+}
+
+/* Save button container */
+.button-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* Save button styling */
+#save-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#save-button:hover {
+    background-color: #0056b3;
+}
