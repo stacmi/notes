@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from models import Note
+#from models import Note
 
-app = FashtAPI()
+app = FastAPI()
 
 @app.get("/")
 def add_note():

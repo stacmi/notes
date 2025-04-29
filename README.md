@@ -58,6 +58,7 @@ python -m venv venv
 source venv/bin/activate   # On macOS/Linux
 venv\Scripts\activate      # On Windows (not tested by me)
 ```
+While on Linux typing `deactive` while in the venv will take you out of it
 
 ### 3. Install the dependencies
 ```bash
@@ -66,7 +67,7 @@ pip install -r requirements.txt
 
 ### 4. Run the server
 ```bash
-uvicorn app.main:app --reload
+uvicorn backend.app.main:app --reload
 ```
 
 ### 5. Open your browser and visit:
