@@ -7,8 +7,8 @@ class Note(BaseModel):
     id: int
     title: str
     content: str
-#    created_at: str
-#    updated_at: str
+    created_at: str
+    updated_at: str
 
 
 # Just a thought for later if/when I add authentication

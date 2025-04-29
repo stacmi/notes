@@ -20,7 +20,6 @@ async def get_index(request: Request):
     This endpoint is used to check if the API is running.
     """
     return templates.TemplateResponse("index.html", {"request": request})
-    #return {"message": "Welcome to the Notes API!"}
 
 @app.get("/notes", response_class=HTMLResponse)
 def read_notes(request: Request):
